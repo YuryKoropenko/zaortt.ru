@@ -1,0 +1,256 @@
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.clearfix:before {
+  content: '';
+  display: table;
+}
+
+html, body {
+	overflow: auto !important;
+	overflow-x: hidden !important;
+}
+
+.header {
+	height: 80px;
+	background-color: #fff;
+	padding: 16px 50px 0;
+	display: block;
+	position: static;
+	float: none;
+}
+.header .mob-header {
+
+}
+.header .mob-header .back {
+	color: rgba(60,32,84,.4);
+	font-size: 20px;
+	font-family: "PFDinTextRegular";
+	display: block;
+	float: left;
+	padding-left: 22px;
+	position: relative;
+}
+.header .mob-header .back::before {
+	content: '';
+	width: 11px;
+	height: 19px;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -9.5px;
+	background-image: url(../img/arrow.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.header .mob-header .search {
+	width: 24px;
+	height: 24px;
+	text-indent: -9999px;
+	display: block;
+	background-image: url(../img/search.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: right;
+}
+.header .logo {
+	float: left;
+}
+.header .logo .link {
+
+}
+.header .nav {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	font-size: 0;
+	float: left;
+	padding-left: 80px;
+	padding-top: 12px;
+}
+.header .nav .item {
+	display: inline-block;
+	padding-right: 40px;
+	position: relative;
+}
+.header .nav .item:last-child {
+	padding-right: 0;
+}
+.header .nav .item:last-child::after {
+	display: none;
+}
+.header .nav .item::after {
+	content: '';
+	display: block;
+	height: 1px;
+	width: 40px;
+	background-color: #ebe8ee;
+	position: absolute;
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+}
+.header .nav .item .link {
+	color: #3c2054;
+	font-size: 18px;
+	font-family: "PFDinTextRegular";
+	display: block;
+	text-decoration: none;
+	padding: 0 20px;
+}
+.header .nav .item .link:hover {
+	text-decoration: none;
+	color: #7d27d3;
+}
+.header .nav .active .link {
+	color: #7d27d3;
+}
+
+.page {
+	padding: 80px 120px;
+	background-color: #ededed;
+}
+.page .title {
+	color: #3c2054;
+	font-size: 44px;
+	font-family: "PFDinTextMedium";
+	line-height: 100%;
+	margin: 0;
+}
+.page .news-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	padding-top: 80px;
+}
+.page .news-list .item {
+	padding-bottom: 30px;
+}
+.page .news-list .time {
+	float: left;
+	width: 272px;
+	color: rgba(60,32,84,.4);
+	font-family: "PFDinTextMedium";
+	font-size: 14px;
+	line-height: auto;
+	letter-spacing: 0.05px;
+	padding-top: 9px;
+}
+.page .news-list .link {
+	float: left;
+	display: inline-block;
+	font-size: 20px;
+	color: #3c2054;
+	line-height: 32px;
+	font-family: "PFDinTextMedium";
+	text-decoration: none;
+	width: 650px;
+}
+.page .news-list .link:hover {
+	text-decoration: underline;
+	color: #3c2054;
+}
+.page .news-list .button-wp {
+	width: 100%;
+	padding-left: 272px;
+	padding-top: 48px;
+}
+.page .news-list .button-wp .button {
+	display: inline-block;
+	padding: 0 25px;
+	height: 44px;
+	line-height: 44px;
+	background-color: #7d27d3;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 22px;
+	font-family: "PFDinTextRegular";
+	font-size: 20px;
+}
+
+.go-index {
+	display: block;
+	width: 100%;
+}
+.go-index .button {
+	width: 100%;
+	display: block;
+	height: 60px;
+	background-color: #3c2054;
+	color: #fff;
+	line-height: 60px;
+	font-size: 20px;
+	font-family: "PFDinTextLight";
+}
+
+/*footer*/
+
+.footer::after {
+	display: none;
+}
+
+/*адаптив*/
+
+@media (max-width: 1163px) {
+	.page .news-list .link {
+		width: 480px;
+	}
+}
+@media (max-width: 1000px) {
+	.footer {
+		display: none !important;
+	}
+	.page {
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 30px;
+		padding-bottom: 0;
+	}
+	.page .title {
+		display: none;
+	}
+	.page .news-list .time,
+	.page .news-list .link {
+		width: 100%;
+	}
+	.page .news-list .link {
+		font-family: "PFDinTextLight";
+		line-height: 30px;
+		font-size: 18px;
+	}
+	.header .logo,
+	.header .nav {
+		display: none;
+	}
+	.header {
+		height: 60px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.header .mob-header .search {
+		margin-top: 3px;
+	}
+	.page .news-list .button-wp {
+		padding-left: 0;
+		width: 100%;
+		padding-top: 0;
+	}
+	.page .news-list .button-wp .button {
+		width: 100%;
+	}
+	.page .news-list {
+		padding-top: 0;
+		padding-bottom: 40px;
+	}
+}
+@media (min-width: 1001px) {
+	.go-index,
+	.header .mob-header {
+		display: none;
+	}
+}
