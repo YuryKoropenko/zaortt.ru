@@ -172,6 +172,61 @@ html, body {
 	font-family: "PFDinTextRegular";
 	font-size: 20px;
 }
+.page .news-comp-list {
+
+}
+.page .news-comp-list .item {
+	padding-bottom: 40px;
+}
+.page .news-comp-list .item .image-wp {
+	float: left;
+	padding-right: 60px;
+}
+.page .news-comp-list .item .image-wp img {
+	width: 230px;
+	height: 130px;
+	display: block;
+}
+.page .news-comp-list .item .text-wp {
+	float: left;
+	width: 705px;
+	margin-top: -10px;
+}
+.page .news-comp-list .item .text-wp .title {
+	color: #3c2054;
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 32px;
+	font-family: "PFDinTextMedium";
+}
+.page .news-comp-list .item .text-wp .title:hover {
+	color: #3c2054;
+	text-decoration: underline;
+}
+.page .news-comp-list .item .text-wp .description {
+	color: #3c2054;
+	font-family: "PFDinTextLight";
+	font-size: 20px;
+	line-height: 32px;
+	padding: 16px 0;
+}
+.page .news-comp-list .item .text-wp .more {
+	color: #b3b3b3;
+	font-size: 20px;
+	line-height: 32px;
+	font-family: "PFDinTextRegular", sans-serif;
+}
+.page .news-comp-list .item .time {
+	float: left;
+	width: 272px;
+	color: rgba(60,32,84,.4);
+	font-family: "PFDinTextMedium";
+	font-size: 14px;
+	line-height: auto;
+	letter-spacing: 0.05px;
+	padding-top: 9px;
+	display: none;
+}
 
 .go-index {
 	display: block;
@@ -187,6 +242,19 @@ html, body {
 	font-size: 20px;
 	font-family: "PFDinTextLight";
 }
+.more-news-wp {
+	padding-left: 290px;
+}
+.more-news-wp .more-news {
+	color: #7d27d3;
+	font-family: "PFDinTextRegular";
+	font-size: 25px;
+	line-height: 30px;
+}
+.more-news-wp .more-news span {
+	margin-right: 16px;
+	display: inline-block;
+}
 
 /*footer*/
 
@@ -196,12 +264,50 @@ html, body {
 
 /*адаптив*/
 
+@media (max-width: 1235px) {
+	.page .news-comp-list .item .text-wp {
+		width: 470px;
+	}
+}
+
 @media (max-width: 1163px) {
 	.page .news-list .link {
 		width: 480px;
 	}
 }
 @media (max-width: 1000px) {
+	.page .news-comp-list .item .time {
+		display: block;
+		width: 100%;
+	}
+	.more-news-wp {
+		padding-left: 0;
+		padding-bottom: 40px;
+	}
+	.more-news-wp .more-news {
+		font-size: 20px;
+	}
+	.page .news-comp-list .item {
+		padding-bottom: 30px;
+	}
+	.page .news-comp-list .item .text-wp {
+		width: 100%;
+		margin-top: 0;
+	}
+	.page .news-comp-list .item .text-wp .title {
+		font-family: "PFDinTextLight";
+		line-height: 30px;
+		font-size: 18px;
+		display: inline-block;
+		width: 100%;
+	}
+	.page .news-comp-list .item .text-wp .description,
+	.page .news-comp-list .item .text-wp .more {
+		display: none;
+	}
+	.page .news-comp-list .item .image-wp {
+		display: none;
+	}
 	.footer {
 		display: none !important;
 	}
