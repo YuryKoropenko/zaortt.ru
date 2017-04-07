@@ -12,6 +12,7 @@
 html, body {
 	overflow: auto !important;
 	overflow-x: hidden !important;
+	background-color: #ededed;
 }
 
 .header {
@@ -56,6 +57,17 @@ html, body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	float: right;
+}
+.header .search {
+	width: 24px;
+	height: 24px;
+	text-indent: -9999px;
+	display: block;
+	background-image: url(../img/search.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	float: right;
+	margin-top: 12px;
 }
 .header .logo {
 	float: left;
@@ -111,6 +123,12 @@ html, body {
 	color: #7d27d3;
 }
 
+.c-page {
+	width: 900px;
+	margin: 0 auto;
+	background-color: #fff;
+}
+
 .page {
 	padding: 80px 120px;
 	background-color: #ededed;
@@ -121,12 +139,16 @@ html, body {
 	font-family: "PFDinTextMedium";
 	line-height: 100%;
 	margin: 0;
+	padding-bottom: 80px;
 }
 .page .news-list {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.page .news-list:last-child {
+	padding-bottom: 0;
 }
 .page .news-list .item {
 	padding-bottom: 30px;
@@ -228,6 +250,86 @@ html, body {
 	display: none;
 }
 
+.content-wp {
+	padding: 40px 90px;
+}
+.content-wp p {
+	font-size: 20px;
+	line-height: 32px;
+	font-family: "PFDinTextLight";
+	color: #3c2054;
+}
+.content-wp .social-row {
+	font-size: 0;
+	padding: 30px 0;
+}
+.content-wp .social-row .item {
+	display: inline-block;
+	padding-right: 20px;
+}
+.content-wp .social-row .item .link {
+	width: 45px;
+	height: 45px;
+	display: block;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	border: 1px solid #e7e7e7;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.content-wp .button-wp {
+
+}
+.content-wp .button-wp .button {
+	display: inline-block;
+	padding: 0 25px;
+	height: 44px;
+	line-height: 44px;
+	background-color: #7d27d3;
+	color: #fff;
+	text-decoration: none;
+	border-radius: 22px;
+	font-family: "PFDinTextRegular";
+	font-size: 20px;
+}
+
+.c-page .img-wp {
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+.c-page .img-wp::after {
+	height: 324px;
+	width: 100%;
+	display: block;
+	content: '';
+	background-image: url(../img/grad.png);
+	background-repeat: repeat-x;
+	background-position: center center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+.c-page .img-wp img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+.c-page .img-wp h2 {
+	position: absolute;
+	display: block;
+	width: auto;
+	left: 40px;
+	right: 40px;
+	bottom: 30px;
+	color: #fff;
+	font-size: 46px;
+	font-family: "PFDinTextMedium";
+	line-height: 100%;
+	z-index: 2;
+}
+
 .go-index {
 	display: block;
 	width: 100%;
@@ -274,8 +376,57 @@ html, body {
 	.page .news-list .link {
 		width: 480px;
 	}
+	.header .nav .item .link {
+		padding: 0 10px;
+	}
 }
 @media (max-width: 1000px) {
+	.c-page .img-wp::after {
+		height: 100%;
+	}
+	.page .title {
+		padding-bottom: 0;
+	}
+	.header .search {
+		display: none;
+	}
+	.c-page .more-news-wp {
+		padding: 30px 30px;
+		background-color: #f7f7f7;
+		margin-top: -24px;
+	}
+	.c-page {
+		width: 100%;
+	}
+	.c-page .img-wp h2 {
+		font-size: 26px;
+	}
+	.c-page .img-wp .time {
+		display: block;
+		color: #fff;
+		z-index: 2;
+		font-size: 14px;
+		font-family: "PFDinTextMedium";
+		letter-spacing: 0.05px;
+		position: absolute;
+		left: 30px;
+		top: 20px;
+	}
+	.c-page .img-wp h2 {
+		left: 30px;
+		right: 30px;
+		bottom: 20px;
+	}
+	.content-wp p {
+		font-size: 18px;
+		line-height: 30px;
+	}
+	.content-wp {
+		padding: 24px 30px;
+	}
+	.content-wp .button-wp {
+		display: none;
+	}
 	.page .news-comp-list .item .time {
 		display: block;
 		width: 100%;
@@ -344,19 +495,21 @@ html, body {
 	.page .news-list .button-wp {
 		padding-left: 0;
 		width: 100%;
-		padding-top: 0;
+		padding-top: 10px;
 	}
 	.page .news-list .button-wp .button {
 		width: 100%;
 	}
 	.page .news-list {
 		padding-top: 0;
-		padding-bottom: 40px;
+		padding-bottom: 40px !important;
 	}
 }
 @media (min-width: 1001px) {
 	.go-index,
-	.header .mob-header {
+	.header .mob-header,
+	.c-page .more-news-wp,
+	.c-page .img-wp .time {
 		display: none;
 	}
 }
