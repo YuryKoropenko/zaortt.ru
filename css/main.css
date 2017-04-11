@@ -394,6 +394,34 @@ html, body {
 	left: 0;
 	top: 0;
 }
+.content-wp .more-ysl {
+	padding-bottom: 40px;
+	padding-top: 40px;
+	border-top: 1px solid #ebe8ee;
+	margin-top: 20px;
+	position: relative;
+}
+.content-wp .more-ysl .title {
+	color: rgba(60, 32, 84,.4);
+	font-size: 14px;
+	letter-spacing: 0.05px;
+	font-family: "PFDinTextMedium";
+	background-color: #fff;
+	position: absolute;
+	padding-right: 40px;
+	top: -18px;
+	left: 0;
+}
+.content-wp .more-ysl .item {
+	display: block;
+}
+.content-wp .more-ysl .item a {
+	color: #7d27d3;
+	font-size: 18px;
+	font-family: "PFDinTextRegular";
+	display: inline-block;
+	padding: 5px 0;
+}
 .f-page .amenities .item .link .scroll .item .sub-scroll {
 	display: none;
 }
@@ -624,6 +652,9 @@ html, body {
 	}
 }
 @media (max-width: 1000px) {
+	.content-wp .more-ysl {
+		display: none;
+	}
 	.f-page .amenities .item,
 	.f-page .amenities .item .link {
 		background-image: none !important;
