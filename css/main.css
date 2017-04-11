@@ -362,8 +362,6 @@ html, body {
 	overflow: auto;
 	display: none;
 	position: absolute;
-	display: none;
-	position: absolute;
 	bottom: 110px;
 	z-index: 995;
 }
@@ -395,6 +393,12 @@ html, body {
 	position: absolute;
 	left: 0;
 	top: 0;
+}
+.f-page .amenities .item .link .scroll .item .sub-scroll {
+	display: none;
+}
+.f-page .amenities .item .link .scroll .item .sub-scroll .item::before {
+	display: none;
 }
 .active-btn {
 	background-color: rgba(100,58,131,.9) !important;

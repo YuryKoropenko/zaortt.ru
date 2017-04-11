@@ -11,6 +11,10 @@ $(document).ready(function() {
 				return false;
 			});
 
+			$('.f-page .amenities .item .link .scroll .item').on('click', function() {
+				$(this).children('.sub-scroll').toggle();
+			});
+
 			$('.f-page .amenities .item .link').hover(function() {
 
 			}, function() {
