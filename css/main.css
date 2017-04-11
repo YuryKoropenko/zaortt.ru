@@ -513,6 +513,7 @@ html, body {
 .f-page .amenities .item .stoggle .menu .item .sub-menu {
 	padding-left: 10px;
 	padding-right: 10px;
+	display: none;
 }
 .f-page .amenities .item .stoggle .menu .item a .button {
 	width: 14px;
@@ -542,6 +543,20 @@ html, body {
 	position: absolute;
 	right: 6px;
 	top: 0;
+}
+.sub-button::before {
+	content: '';
+	width: 14px;
+	height: 2px;
+	background-color: #3c2054;
+	display: block;
+	position: absolute;
+	right: 0;
+	top: 6px;
+}
+.sub-button::after {
+	content: '';
+	display: none !important;
 }
 .f-page .more-news-wp {
 	padding: 35px 0 35px 50px;

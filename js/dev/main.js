@@ -27,6 +27,11 @@ $(document).ready(function() {
 				$(this).children('.button').toggleClass('active');
 				$(this).parent().children('.stoggle').stop(false, true).slideToggle();
 			});
+			$('.f-page .amenities .item .menu .item a').on('click', function() {
+				$(this).children('.button').toggleClass('sub-button');
+				$(this).parent().children('.sub-menu').stop(false, true).slideToggle();
+				return false;
+			});
 		}
 	});
 
