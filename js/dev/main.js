@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	$('.header .search').on('click', function() {
+		$('.header .search-block').toggle();
+		return false;
+	});
+	$('.header .search-block .button').on('click', function() {
+		$('.header .search-block').hide();
+	});
 	$('.f-page .amenities .item .link').on('click', function() {
 		return false;
 	});

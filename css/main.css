@@ -25,8 +25,9 @@ html, body {
 	background-color: #fff;
 	padding: 16px 50px 0;
 	display: block;
-	position: static;
+	position: relative;
 	float: none;
+	top: 0;
 }
 .header .mob-header {
 
@@ -576,16 +577,59 @@ html, body {
 	right: 6px;
 	top: 0;
 }
-.sub-button::before {
-	content: '';
-	width: 14px;
-	height: 2px;
-	background-color: #3c2054;
+.header .search-block {
+	width: auto;
+	height: 40px;
+	background-color: #fff;
+	position: absolute;
+	bottom: -40px;
+	left: 0;
+	right: 0;
+	padding-left: 50px;
+	padding-right: 100px;
+	display: none;
+}
+.header .search-block input {
+	width: 100%;
+	display: block;
+	height: 30px;
+	margin-top: 5px;
+	bottom: 5px;
+	left: 50px;
+	right: 100px;
+	border-bottom: 1px solid #ededed;
+	color: #7d27d3;
+	font-size: 18px;
+	font-family: "PFDinTextRegular";
+}
+.header .search-block .button {
+	width: 19px;
+	height: 19px;
 	display: block;
 	position: absolute;
-	right: 0;
-	top: 6px;
+	right: 50px;
+	top: 10.5px;
+
 }
+.header .search-block .button::before {
+	content: '';
+	width: 18px;
+	height: 2px;
+	background-color: #643a8d;
+	position: absolute;
+	top: 8px;
+	left: 0;
+}
+.header .search-block .button::after {
+	content: '';
+	width: 2px;
+	height: 18px;
+	background-color: #643a8d;
+	position: absolute;
+	top: 0px;
+	left: 8px;
+}
+
 .sub-button::after {
 	content: '';
 	display: none !important;
@@ -652,6 +696,13 @@ html, body {
 	}
 }
 @media (max-width: 1000px) {
+	.header .search-block {
+		padding-left: 30px;
+		padding-right: 60px;
+	}
+	.header .search-block .button {
+		right: 30px;
+	}
 	.content-wp .more-ysl {
 		display: none;
 	}
