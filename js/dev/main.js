@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	$('.popup-cb .popup-cb-wp .close').on('click', function() {
+		$(this).parent().parent().parent('.popup-cb-wrapper').hide();
+	});
+	$('.callback-sv').on('click', function() {
+		$('.popup-cb-wrapper').show();
+		return false;
+	});
 	$('.header .search').on('click', function() {
 		$('.header .search-block').toggle();
 		return false;

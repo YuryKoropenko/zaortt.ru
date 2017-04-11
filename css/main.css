@@ -666,6 +666,170 @@ html, body {
 	display: inline-block;
 }
 
+.popup-cb {
+	background-color: #f7f7f7;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+}
+.popup-cb .popup-cb-wp {
+	padding-left: 150px;
+	padding-right: 150px;
+}
+.popup-cb .popup-cb-wp .title {
+	color: #3c2054;
+	font-size: 44px;
+	line-height: auto;
+	font-family: "PFDinTextMedium";
+	padding-bottom: 30px;
+	display: block;
+}
+.popup-cb .popup-cb-wp .item {
+	width: 50%;
+	float: left;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.popup-cb .popup-cb-wp .item input {
+	height: 60px;
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid #e4e1e6;
+	color: #3c2054;
+	font-size: 22px;
+	font-family: "PFDinTextLight";
+	background-color: transparent;
+}
+.popup-cb .popup-cb-wp .item input::-webkit-input-placeholder {color:#3c2054;}
+.popup-cb .popup-cb-wp .item input::-moz-placeholder          {color:#3c2054;}/* Firefox 19+ */
+.popup-cb .popup-cb-wp .item input:-moz-placeholder           {color:#3c2054;}/* Firefox 18- */
+.popup-cb .popup-cb-wp .item input:-ms-input-placeholder      {color:#3c2054;}
+.popup-cb .popup-cb-wp .item textarea {
+	height: 60px;
+	width: 100%;
+	display: block;
+	border-bottom: 1px solid #e4e1e6;
+	color: #3c2054;
+	font-size: 22px;
+	font-family: "PFDinTextLight";
+	background-color: transparent;
+	line-height: 58px;
+	resize: none;
+}
+.popup-cb .popup-cb-wp .item textarea::-webkit-input-placeholder {color:#3c2054;}
+.popup-cb .popup-cb-wp .item textarea::-moz-placeholder          {color:#3c2054;}/* Firefox 19+ */
+.popup-cb .popup-cb-wp .item textarea:-moz-placeholder           {color:#3c2054;}/* Firefox 18- */
+.popup-cb .popup-cb-wp .item textarea:-ms-input-placeholder      {color:#3c2054;}
+
+.popup-cb .popup-cb-wp .close {
+	width: 70px;
+	height: 70px;
+	display: block;
+	background-color: #643a8d;
+	border: none;
+	position: absolute;
+	right: 150px;
+	top: 0;
+}
+.popup-cb .popup-cb-wp .close span {
+	width: 18px;
+	height: 18px;
+	display: inline-block;
+	position: relative;
+}
+.popup-cb .popup-cb-wp .close span::before {
+	content: '';
+	width: 2px;
+	height: 18px;
+	background-color: #fff;
+	position: absolute;
+	left: 8px;
+	top: 0;
+	display: block;
+}
+.popup-cb .popup-cb-wp .close span::after {
+	content: '';
+	width: 18px;
+	height: 2px;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	top: 8px;
+	display: block;
+}
+
+.popup-cb-wrapper {
+	display: none;
+	z-index: 999;
+}
+
+.callback-sv {
+	color: #000;
+	font-size: 16px;
+}
+
+.popup-cb .popup-cb-wp .button-wp {
+	float: left;
+	padding-top: 50px;
+	position: relative;
+}
+.popup-cb .popup-cb-wp .button-wp .ok {
+	font-size: 20px;
+	color: #7d27d3;
+	padding: 0 33px;
+	background-color: #f0ebf5;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	border-radius: 25px;
+	float: left;
+	margin-left: 40px;
+	margin-top: -8px;
+}
+.popup-cb .popup-cb-wp .button-wp .eror {
+	font-size: 20px;
+	color: #c80e6d;
+	padding: 0 33px;
+	background-color: #f4e9ef;
+	height: 50px;
+	line-height: 50px;
+	display: block;
+	border-radius: 25px;
+	float: left;
+	margin-left: 40px;
+	margin-top: -8px;
+}
+.popup-cb .popup-cb-wp .button-wp .button {
+	color: rgba(125,39,211,.5);
+	font-size: 25px;
+	padding-left: 62px;
+	position: relative;
+	display: inline-block;
+	float: left;
+}
+.popup-cb .popup-cb-wp .button-wp .button::before {
+	content: '';
+	width: 30px;
+	height: 3px;
+	background-color: #7d27d3;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	margin-top: -1.5px;
+}
+
 /*footer*/
 
 .footer::after {
@@ -696,6 +860,54 @@ html, body {
 	}
 }
 @media (max-width: 1000px) {
+	.popup-cb .popup-cb-wp .close {
+		width: 60px;
+		height: 60px;
+		right: 30px;
+	}
+	.popup-cb .popup-cb-wp .item textarea,
+	.popup-cb .popup-cb-wp .item input {
+		font-size: 18px;
+		height: 50px;
+		line-height: 48px;
+	}
+	.popup-cb .popup-cb-wp {
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.popup-cb .popup-cb-wp .title {
+		font-size: 33px;
+	}
+	.popup-cb .popup-cb-wp .item {
+		width: 100% !important;
+		padding: 0 !important;
+	}
+	.popup-cb .popup-cb-wp .button-wp {
+		padding-top: 25px;
+	}
+	.popup-cb .popup-cb-wp .button-wp .ok {
+		margin-left: 0;
+		font-size: 18px;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.popup-cb .popup-cb-wp .button-wp .eror {
+		margin-left: 0;
+		font-size: 18px;
+		width: 100%;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		text-align: center;
+		margin-top: 20px;
+	}
+	.popup-cb .popup-cb-wp .button-wp .button {
+		font-size: 20px;
+	}
 	.header .search-block {
 		padding-left: 30px;
 		padding-right: 60px;
